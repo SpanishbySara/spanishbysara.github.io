@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpanishbySara</title>
+<style>
+  :root{
+    --bg:#3F493D;
+    --card:#F5F0E4;
+    --text:#F5F0E4;
+    --muted:#D6D0C2;
+    --accent:#B2BD92;
+    --accent-soft:#5C684F;
+    --border:#59644F;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+  .wrap{max-width:1100px;margin:auto;padding:0 28px}
+  header{
+    padding:48px 0 34px;
+    border-bottom:1px solid var(--border);
+  }
+  .eyebrow{
+    color:var(--accent);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  h1{
+    font-family: Georgia, serif;
+    font-size:clamp(38px,6vw,64px);
+    line-height:1;
+    font-weight:500;
+    margin:0 0 14px;
+  }
+  .intro{color:var(--muted);font-size:17px;max-width:620px;line-height:1.6}
+  main{padding:42px 0 70px}
+  .section-title{
+    display:flex;justify-content:space-between;align-items:end;
+    margin-bottom:22px;
+  }
+  .section-title h2{font-family:Georgia,serif;font-size:30px;font-weight:500;margin:0}
+  .section-title span{color:var(--muted);font-size:14px}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:18px;
+  }
+  .unit{
+    position:relative;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:28px;
+    min-height:205px;
+    text-decoration:none;
+    color:inherit;
+    transition:transform .2s, box-shadow .2s, border-color .2s;
+    overflow:hidden;
+  }
+  .unit:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(50,40,30,.08);
+    border-color:#C9CDBE;
+  }
+  .number{
+    color:#C9785F;
+    font-size:13px;
+    font-weight:750;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  .unit h3{
+    color:#292923;
+    font-family:Georgia,serif;
+    font-size:30px;
+    font-weight:500;
+    margin:14px 0 12px;
+  }
+  .unit p{margin:0;color:#6F6A60;line-height:1.5}
+  .arrow{
+    position:absolute;right:24px;bottom:21px;
+    width:38px;height:38px;border-radius:50%;
+    background:var(--accent-soft);
+    display:grid;place-items:center;
+    color:var(--accent);font-size:20px;
+  }
+
+  .availability{
+    margin-top:48px;
+    padding:28px 30px;
+    border:1px solid #59644F;
+    border-radius:22px;
+    background:#4A5547;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+  }
+  .availability h3{
+    margin:0 0 7px;
+    color:#F5F0E4;
+    font-family:Georgia,serif;
+    font-size:26px;
+    font-weight:500;
+  }
+  .availability p{
+    margin:0;
+    color:#D6D0C2;
+    line-height:1.5;
+  }
+  .availability a{
+    flex-shrink:0;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 18px;
+    border-radius:999px;
+    background:#C9785F;
+    color:#fff8ef;
+    text-decoration:none;
+    font-weight:700;
+    font-size:14px;
+    transition:transform .2s, opacity .2s;
+  }
+  .availability a:hover{
+    transform:translateY(-2px);
+    opacity:.92;
+  }
+
+  @media(max-width:700px){
+    .wrap{padding:0 18px}
+    header{padding:34px 0 26px}
+    h1{font-size:38px;line-height:1.05;max-width:330px}
+    .intro{font-size:15px;line-height:1.5}
+    main{padding:30px 0 48px}
+    .section-title{margin-bottom:16px}
+    .section-title h2{font-size:27px}
+    .section-title span{font-size:13px}
+    .grid{grid-template-columns:1fr;gap:14px}
+    .unit{min-height:205px;padding:23px;border-radius:18px}
+    .unit h3{font-size:27px;line-height:1.12;margin:11px 0 9px;padding-right:60px}
+    .unit p{font-size:14px;line-height:1.45;padding-right:60px;padding-bottom:34px}
+    .arrow{right:18px;bottom:18px;width:34px;height:34px}
+    .availability{
+      margin-top:32px;
+      padding:22px;
+      border-radius:18px;
+      gap:18px;
+      flex-direction:column;
+      align-items:stretch
+    }
+    .availability h3{font-size:24px;line-height:1.15}
+    .availability p{font-size:14px}
+    .availability a{width:100%;box-sizing:border-box;padding:12px 16px}
+  }
+
+  footer{padding:24px 0 42px;color:#C9C4B8;font-size:13px;text-align:center}
+  @media(max-width:700px){
+    .wrap{padding:0 18px}
+    header{padding-top:34px}
+    .grid{grid-template-columns:1fr}
+    .unit{min-height:185px}
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">SpanishbySara</div>
+      <h1>Tu espacio para practicar español</h1>
+      <p class="intro">Actividades para practicar español por la profe Sara Rojas.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="section-title">
+      <h2>Unidades</h2>
+      <span>4 unidades</span>
+    </div>
+
+    <section class="grid">
+      <a class="unit" href="#">
+        <div class="number">Unidad 1</div>
+        <h3>¡Nos conocemos!</h3>
+        <p>Saludos, presentaciones y primeros pasos en español.</p>
+        <div class="arrow">→</div>
+      </a>
+
+      <a class="unit" href="#">
+        <div class="number">Unidad 2</div>
+        <h3>Un día normal en mi vida</h3>
+        <p>Rutinas, actividades cotidianas y cómo hablar de tu día.</p>
+        <div class="arrow">→</div>
+      </a>
+
+      <a class="unit" href="#">
+        <div class="number">Unidad 3</div>
+        <h3>¡Qué aproveche!</h3>
+        <p>Comida, bebida, supermercado y situaciones relacionadas con comer.</p>
+        <div class="arrow">→</div>
+      </a>
+
+      <a class="unit" href="#">
+        <div class="number">Unidad 4</div>
+        <h3>Una caña, por favor</h3>
+        <p>En bares y restaurantes: pedir, preguntar y desenvolverse en español.</p>
+        <div class="arrow">→</div>
+      </a>
+    </section>
+
+    <section class="availability">
+      <div>
+        <h3>¿Necesitas una clase extra?</h3>
+        <p>Consulta mis huecos disponibles.</p>
+      </div>
+      <a href="https://calendar.app.google/3LHavApStKhwy5YXA" target="_blank" rel="noopener noreferrer">
+        → Ver disponibilidad
+      </a>
+    </section>
+  </main>
+
+  <footer>SpanishbySara · Actividades y materiales de español</footer>
+</body>
+</html>
